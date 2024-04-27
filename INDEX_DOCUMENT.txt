@@ -1,0 +1,11 @@
+I currently have two indexes on wTeam and lTeam in the games collection.
+These indexes were created through MongoDB Atlas.
+They benefit two main functions:
+    1. Updating the wins and elimination status of each team after it has been involved in the creation or editing of a game.
+    2. Generating the report based on a single team.
+
+For both of these, it benefits those functions by:
+    - Increasing the speed at which the query can find games that involve a certain team
+    - Reducing the number of page IOs
+
+I believe these are the two most efficient indexes for my website because of how frequently certain games involving specific teams are needed to be found.
